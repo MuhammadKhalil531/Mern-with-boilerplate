@@ -1,0 +1,32 @@
+My First Application with front-end and backend service
+
+what i have learned?
+
+How the backend Apis works 
+How to set up Mongodb with backend 
+
+how to connect Frontend with Backend
+
+        KeyPoints ::
+        <STEP:1>
+                    < in the backend packege.json file configuration >
+         "scripts": {
+             <!-----use in Future----->
+            "client-install": "npm install --prefix client",
+            "test": "echo \"Error: no test specified\" && exit 1",
+            <!-----Tell us how our backend will run----->
+            "start": "node Server.js",
+            <!-----Tell us how our backend server will run with nodemon----->
+            "Server": "nodemon Server.js",
+            <!-----Tell us how our client will run----->
+            "client":"npm start --prefix client",
+            <!-----Tell us how both forntend and backend will run with the help of npm concurrently packege----->
+            "dev" : "concurrently \"npm run Server\" \"npm run client\" "
+          },
+          
+          <STEP:2>
+                     < in the client packege.json file configuration >
+                  <!-----just add this line and tell the client server is running at port 90000----->
+                  "proxy": "http://localhost:9000",
+
+

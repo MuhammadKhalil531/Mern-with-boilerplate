@@ -1,0 +1,23 @@
+{
+  "name": "traversy-mern",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Server.js",
+  "scripts": {
+    "client-install": "npm install --prefix client",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node Server.js",
+    "Server": "nodemon Server.js",
+    "client":"npm start --prefix client",
+    "dev" : "concurrently \"npm run Server\" \"npm run client\" "
+  },
+  "author": "MohammadKhalil",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "concurrently": "^7.6.0",
+    "express": "^4.18.2",
+    "mongoose": "^6.9.1",
+    "nodemon": "^2.0.20"
+  }
+}
